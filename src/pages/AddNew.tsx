@@ -29,7 +29,7 @@ const AddNew = () => {
   return (
     <>
       <form onSubmit={(e) => addRecord(e)} id="to-do-form">
-        <input onChange={handleChange} type="text" placeholder="Enter WishList Item" />
+        <input className="input" onChange={handleChange} type="text" placeholder="Enter Wish" />
         <button type="submit">Add</button>
       </form>
     </>

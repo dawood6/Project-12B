@@ -1,16 +1,17 @@
 import React from "react";
+import './Loader.css'
 
 const Loader = () => {
   return (
     <div>
-      <div className="gooey">
-        <span className="dot"></span>
-        <div className="dots">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
+      <div className="about">
+</div>
+<div className="content">
+   <div className="loading">
+<p>loading</p>
+      <span></span>
+   </div>
+</div>
     </div>
   );
 };

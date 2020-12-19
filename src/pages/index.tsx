@@ -5,6 +5,7 @@ import "./main.css";
 import AddNew  from "./AddNew";
 import FlipMove from "react-flip-move";
 import Loader from "./Loader";
+import Header from './Header'
 
 function Index() {
   const { loading, error, data } = useQuery(READ_OPERATION);
@@ -27,9 +28,10 @@ function Index() {
   }
   const listItems = data.read.map((d) => {
     return (
+      <div>
       <div className="list" key={d.id}>
         <p>
-          <input type="text" disabled value={d.wish} />
+          <input className="add" type="text" disabled value={d.wish} />
           <span>
             <span className="i" onClick={() => removeData(d.id)}>
               🗑️
@@ -37,17 +39,22 @@ function Index() {
           </span>
         </p>
       </div>
+      </div>
     );
   });
+
   return (
+    <div>
+      <Header />
     <div className="App">
       <div>
-        <h1>Wish List</h1>
+        <h1 className="h1">Wish List</h1>
         <AddNew />
         <FlipMove duration={300} easing="ease-in-out">
           {listItems}
         </FlipMove>
       </div>
+    </div>
     </div>
   );
 }
